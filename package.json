@@ -1,0 +1,29 @@
+{
+  "name": "mcp-bundler",
+  "type": "module",
+  "scripts": {
+    "dev": "npx tsx watch src/index.ts",
+    "start": "npx tsc && node dist/index.js",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "@google-cloud/storage": "^7.15.2",
+    "@hono/node-server": "^1.13.7",
+    "@hono/swagger-ui": "^0.5.1",
+    "@hono/zod-openapi": "^0.19.2",
+    "@sentry/node": "^9.0.1",
+    "@sentry/profiling-node": "^9.0.1",
+    "@types/node": "^20.11.17",
+    "@types/node-fetch": "^2.6.12",
+    "bun": "^1.2.1",
+    "dotenv": "^16.4.7",
+    "esbuild": "^0.24.2",
+    "hono": "^4.6.19",
+    "node-fetch": "^3.3.2",
+    "tsx": "^4.7.1",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.4",
+    "zod": "^3.24.2"
+  },
+  "packageManager": "pnpm@9.3.0+sha512.ee7b93e0c2bd11409c6424f92b866f31d3ea1bef5fbe47d3c7500cdc3c9668833d2e55681ad66df5b640c61fa9dc25d546efa54d76d7f8bf54b13614ac293631"
+}

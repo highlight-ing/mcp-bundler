@@ -1,0 +1,1 @@
+Packaged bundles will be stored in this folder unless GCP_INTEGRATION is enabled.
