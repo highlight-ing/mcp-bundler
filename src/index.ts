@@ -494,7 +494,7 @@ app.get("/v2/bundler", async (c) => {
       } else {
         // Extract the actual path from the upload log as fallback
         const pathMatch = resultStr.match(
-          /gs:\/\/bundler-microservice-servers\/([^\/]+)\/([^\/]+)\/[^\/]+\.tar\.gz/
+          /gs:\/\/([^\/]+)\/([^\/]+)\/([^\/]+)\/[^\/]+\.tar\.gz/
         );
 
         if (pathMatch && pathMatch.length >= 3) {
@@ -522,7 +522,7 @@ app.get("/v2/bundler", async (c) => {
     return c.json({
       success: true,
       gcp_upload: {
-        bucket: "bundler-microservice-servers",
+        bucket: process.env.GCP_BUCKET_NAME,
         path: `${mcpId}/${actualCommit}/`,
         files: [archiveFilename],
       },

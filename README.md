@@ -64,7 +64,7 @@ GET /v2/bundler?url=<github_url>&commit=<commit_hash>&mcpId=<your_mcp_id>
 {
   "success": true,
   "gcp_upload": {
-    "bucket": "bundler-microservice-servers",
+    "bucket": "your-bucket-name",
     "path": "your-mcp-id/commit-hash/",
     "files": [
       "bundle-commit-hash.tar.gz"
@@ -113,7 +113,7 @@ This is the recommended option for development and CI/CD environments.
 
 ### Required Permissions
 
-Create a service account with `Storage Admin` permissions for the bucket `bundler-microservice-servers`.
+Create a service account with `Storage Admin` permissions for the bucket you want to use.
 
 ## Deployment
 

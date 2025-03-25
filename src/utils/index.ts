@@ -183,7 +183,7 @@ export async function uploadToGCPBucket(
       storage = new Storage();
     }
 
-    const bucketName = "bundler-microservice-servers";
+    const bucketName = process.env.GCP_BUCKET_NAME!;
     const bucket = storage.bucket(bucketName);
 
     // Create base destination path in the format: $MCP_ID/$GITHUB_COMMIT/
